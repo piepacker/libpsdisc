@@ -1,0 +1,3 @@
+[submodule "icystdlib"]
+	path = icystdlib
+	url = https://github.com/jstine35/icystdlib

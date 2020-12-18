@@ -1,0 +1,21 @@
+*.o
+*.d
+*.so
+*.dll
+*.dylib
+*.lib
+*.pdb
+*.exp
+*.manifest
+
+/old
+
+#visual studio user local things.
+*.user
+.vs/
+
+# ClCompileDefault.props neatly outputs artifacts to bin and obj dirs.
+obj/
+bin/
+
+

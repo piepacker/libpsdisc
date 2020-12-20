@@ -4,7 +4,6 @@
 
 #include "psdisc-hostio.h"
 #include "psdisc-types.h"
-#include "fs.h"
 
 #include <vector>
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="$(PathToLibPsdisc)\src\psdisc-filesystem-ecma-119.cpp" />
-    <ClCompile Include="$(PathToLibPsdisc)\src\psdisc-cdvd-image.cpp" />
+    <ClCompile Include="$(PATH_TO_LIBPSDISC)\src\psdisc-filesystem-ecma-119.cpp" />
+    <ClCompile Include="$(PATH_TO_LIBPSDISC)\src\psdisc-cdvd-image.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(PathToLibPsdisc)\inc\psdisc-filesystem.h" />
-    <ClInclude Include="$(PathToLibPsdisc)\inc\psdisc-cdvd-image.h" />
-    <ClInclude Include="$(PathToLibPsdisc)\inc\psdisc-endian.h" />
-    <ClInclude Include="$(PathToLibPsdisc)\inc\psdisc-hostio.h" />
-    <ClInclude Include="$(PathToLibPsdisc)\inc\psdisc-types.h" />
+    <ClInclude Include="$(PATH_TO_LIBPSDISC)\inc\psdisc-filesystem.h" />
+    <ClInclude Include="$(PATH_TO_LIBPSDISC)\inc\psdisc-cdvd-image.h" />
+    <ClInclude Include="$(PATH_TO_LIBPSDISC)\inc\psdisc-endian.h" />
+    <ClInclude Include="$(PATH_TO_LIBPSDISC)\inc\psdisc-hostio.h" />
+    <ClInclude Include="$(PATH_TO_LIBPSDISC)\inc\psdisc-types.h" />
   </ItemGroup>
 </Project>

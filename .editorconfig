@@ -4,16 +4,16 @@ root = true
 indent_style = space
 end_of_line = lf
 
-[*.{cpp,h,inl}]
+[*.{c,cpp,h,hpp,inl}]
 insert_final_newline = true
 indent_size = 4
 
 [*.{txt,md}]
 indent_size = 4
 
-[*,{html,xml,cs}]
+[*.{html,xml,cs}]
 indent_size = 2
 
-[*,{csproj,vcxproj,sln}]
-indent_style = tab
-end_of_line = lf
+[*.{csproj,vcxproj,sln,msbuild}]
+indent_style = space
+end_of_line = crlf

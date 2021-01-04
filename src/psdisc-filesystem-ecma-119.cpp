@@ -49,7 +49,7 @@ bool PsDiscDirParser::ReadSubDir(UDF_AddFileCallback add_file_cb, psdisc_off_t s
          log_host("sector=%-4jd dirlen=%-5jd", JFMT(sector), JFMT(dirlen));
     }
 
-    if (!read_data_cb(dir, sector, 0, dirlen)) {
+    if (!read_data_cb(dir, sector, 0, (dirlen + 2047) & ~2047)) {
         return false;
     }
 

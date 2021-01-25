@@ -7,6 +7,11 @@
 #   define __bswap16(in)    _byteswap_ushort(in)
 #   define __bswap32(in)    _byteswap_ulong(in)
 #   define __bswap64(in)    _byteswap_uint64(in)
+#else
+#   include <cstdlib>
+#   define __bswap16(in)    __builtin_bswap16(in)
+#   define __bswap32(in)    __builtin_bswap32(in)
+#   define __bswap64(in)    __builtin_bswap64(in)
 #endif
 
 

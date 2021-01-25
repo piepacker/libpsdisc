@@ -161,6 +161,7 @@ bool DiscFS_DetectMediaDescription(MediaSourceDescriptor& desc, PsDiscFn_ioPread
 
 bool DiscFS_DetectMediaDescription(MediaSourceDescriptor& desc, int fd)
 {
+    desc.image_size = posix_fstat(fd).st_size;
     return DiscFS_DetectMediaDescription(desc,
         [&](void* dest, size_t count, x_off_t pos) {
             return posix_pread(fd, dest, count, pos);

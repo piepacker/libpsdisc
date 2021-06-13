@@ -32,12 +32,11 @@ T LoadFromLE(const T& src)
         "Invalid input data for LoadFromLE"
     );
 
-    switch (sizeof(T)) {
-        case 1: return src;
-        case 2: return __bswap16((u16)src);
-        case 4: return __bswap32((u32)src);
-        case 8: return __bswap64((u64)src);
-    }
+    if constexpr (sizeof(T)) return src;
+    if constexpr (sizeof(T)) return __bswap16((u16)src);
+    if constexpr (sizeof(T)) return __bswap32((u32)src);
+    if constexpr (sizeof(T)) return __bswap64((u64)src);
+
     return src;
 }
 
@@ -59,12 +58,11 @@ T LoadFromBE(const T& src)
         "Invalid input data for LoadFromBE"
     );
 
-    switch (sizeof(T)) {
-        case 1: return src;
-        case 2: return __bswap16((uint16_t)src);
-        case 4: return __bswap32((uint32_t)src);
-        case 8: return __bswap64((uint64_t)src);
-    }
+    if constexpr (sizeof(T) == 1) return src;
+    if constexpr (sizeof(T) == 2) return __bswap16((uint16_t)src);
+    if constexpr (sizeof(T) == 4) return __bswap32((uint32_t)src);
+    if constexpr (sizeof(T) == 8) return __bswap64((uint64_t)src);
+
     return src;
 }
 #endif

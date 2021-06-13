@@ -9,6 +9,7 @@ target_include_directories(libpsdisc PRIVATE   "${CMAKE_CURRENT_SOURCE_DIR}/src"
 target_include_directories(libpsdisc PUBLIC    "${CMAKE_CURRENT_SOURCE_DIR}/inc")
 
 target_link_libraries(libpsdisc LINK_PUBLIC icystdlib)
+target_link_libraries(libpsdisc LINK_PUBLIC zlib)
 
 if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "MSVC")
     add_definitions(/FI"fi-platform-defines.h" /FI"fi-printf-redirect.h")

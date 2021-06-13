@@ -64,7 +64,6 @@ bool PsDiscDirParser::ReadSubDir(UDF_AddFileCallback add_file_cb, psdisc_off_t s
     int         item_count = 0;     // 0 and 1 are '.' and '..' respectively.
 
     intmax_t    offset          = 0;
-    int         pad_threshold   = 0;
     while (offset < dirlen)
     {
         // Some PS2 discs (War of the Monsters, USA) have many files per directory and so dirlen

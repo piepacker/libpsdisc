@@ -10,6 +10,7 @@
 
 
 #include <functional>
+#include <cstring>
 
 // returns TRUE if the given sector contains CD001 signature.
 // This check is good when you know the incoming media is _some_ kind of CD image. If using 

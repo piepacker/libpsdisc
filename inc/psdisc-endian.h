@@ -14,8 +14,11 @@
 #   define __bswap64(in)    __builtin_bswap64(in)
 #endif
 
+#ifndef _BIG_ENDIAN
+#	define _BIG_ENDIAN 0
+#endif
 
-#if BIG_ENDIAN
+#if _BIG_ENDIAN
 template<typename T>
 T LoadFromBE(const T& src) {
     return src;

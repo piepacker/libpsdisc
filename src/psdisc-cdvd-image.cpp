@@ -114,12 +114,14 @@ bool DiscFS_DetectMediaDescription(MediaSourceDescriptor& desc, PsDiscFn_ioPread
         if(((desc.image_size-16) % 2352) == 0) {
             desc.offset_file_header     = 16;
             desc.offset_sector_leadin   = 8;    // mode1
-        }           
+        }
         else {
-            dbg_check(false, "Unknown 2352 image layout. Assuming CDROM Mode 2 with no image header.");
+			// The proper mode detection have only an impact on the DVD layer break detection
+			// Otherwise in both case desc.offset_sector_leadin + desc.offset_file_header == 24
+            log_error("Unknown 2352 image layout. Assuming CDROM Mode 2 with no image header.");
             desc.offset_file_header     = 0;
             desc.offset_sector_leadin   = 24;   // mode2
-            return 0;
+            //return 0;
         }
     } else
 

@@ -69,3 +69,17 @@ T LoadFromBE(const T& src)
     return src;
 }
 #endif
+
+template<typename T, typename T2>
+void StoreToLE(T& dest, const T2& src) {
+    static_assert(std::is_fundamental<T>::value && std::is_fundamental<T2>::value);
+    static_assert(sizeof(T) == sizeof(T2));
+    dest = LoadFromLE((T)src);
+}
+
+template<typename T, typename T2>
+void StoreToBE(T& dest, const T& src) {
+    static_assert(std::is_fundamental<T>::value && std::is_fundamental<T2>::value);
+    static_assert(sizeof(T) == sizeof(T2));
+    dest = LoadFromBE((T)src);
+}
